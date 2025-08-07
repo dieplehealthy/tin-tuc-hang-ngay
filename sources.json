@@ -1,0 +1,22 @@
+[
+  {
+    "name": "VnExpress - Tin mới nhất",
+    "url": "https://vnexpress.net/rss/tin-moi-nhat.rss"
+  },
+  {
+    "name": "Tuổi Trẻ - Tin mới nhất",
+    "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss"
+  },
+  {
+    "name": "Thanh Niên - Thời sự",
+    "url": "https://thanhnien.vn/rss/thoi-su.rss"
+  },
+  {
+    "name": "Zing News - Xuất bản",
+    "url": "https://zingnews.vn/rss/xuat-ban.rss"
+  },
+  {
+    "name": "Báo Dân Trí - Trang chủ",
+    "url": "https://dantri.com.vn/rss/home.rss"
+  }
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức Tổng Hợp Hàng Ngày</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0 auto; 
+            max-width: 800px; 
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .update-time {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #555;
+        }
+        .article { 
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px; 
+            margin-bottom: 20px; 
+        }
+        .article h2 { 
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .article h2 a {
+            text-decoration: none;
+            color: #2980b9;
+        }
+        .article h2 a:hover {
+            text-decoration: underline;
+        }
+        .article-meta { 
+            font-size: 0.8em; 
+            color: #7f8c8d; 
+            margin-bottom: 15px;
+        }
+        .article-summary {
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tin Tức Tổng Hợp</h1>
+        <p class="update-time">Cập nhật lần cuối: <strong>{{ update_time }}</strong></p>
+    </header>
+
+    <main>
+        {% for article in articles %}
+        <div class="article">
+            <h2><a href="{{ article.link }}" target="_blank" rel="noopener noreferrer">{{ article.title }}</a></h2>
+            <p class="article-meta"><strong>Nguồn:</strong> {{ article.source }} | <strong>Xuất bản:</strong> {{ article.published }}</p>
+            <div class="article-summary">{{ article.summary | safe }}</div>
+        </div>
+        {% endfor %}
+    </main>
+    
+    <footer>
+        <p>Trang web được tự động tạo bởi Python & GitHub Actions.</p>
+    </footer>
+</body>
+</html>
